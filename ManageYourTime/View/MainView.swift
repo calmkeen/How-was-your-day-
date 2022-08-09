@@ -12,7 +12,7 @@ class Mainview: UIViewController {
     
     
     var list1: UIView = {
-        let list1: UIView()
+        let list1 = UIView()
         list1.backgroundColor = .gray
         return list1
     }()
@@ -34,7 +34,7 @@ class Mainview: UIViewController {
     }
     func ViewSizing(){
         list1.snp.makeConstraints{make in
-            make.edges.equalTo()
+            make.edges.equalTo(view.safeAreaLayoutGuide)
         }
         
     }
