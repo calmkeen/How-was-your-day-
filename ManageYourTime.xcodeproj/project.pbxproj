@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4BD703A6F78731AF4C37087C /* Pods_ManageYourTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382C92AE62E7D3190A8CE76D /* Pods_ManageYourTimeTests.framework */; };
 		6618B9754850BCAF3A5BAFED /* Pods_ManageYourTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72497C305201C05958E8FEB /* Pods_ManageYourTime.framework */; };
+		753C7EB328A3881500C91C7B /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753C7EB228A3881500C91C7B /* Preview.swift */; };
 		75D17B2228A0EB78005AC477 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D17B2128A0EB78005AC477 /* FocusView.swift */; };
 		75D17B2428A0EB81005AC477 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D17B2328A0EB81005AC477 /* CategoryView.swift */; };
 		75D17B2628A0EB8D005AC477 /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D17B2528A0EB8D005AC477 /* CompareView.swift */; };
@@ -51,6 +52,7 @@
 		0E6F064E987816D4F2A93A39 /* Pods-ManageYourTime-ManageYourTimeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManageYourTime-ManageYourTimeUITests.debug.xcconfig"; path = "Target Support Files/Pods-ManageYourTime-ManageYourTimeUITests/Pods-ManageYourTime-ManageYourTimeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		382C92AE62E7D3190A8CE76D /* Pods_ManageYourTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManageYourTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A87B3EC02E099DF921C0070 /* Pods-ManageYourTimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManageYourTimeTests.release.xcconfig"; path = "Target Support Files/Pods-ManageYourTimeTests/Pods-ManageYourTimeTests.release.xcconfig"; sourceTree = "<group>"; };
+		753C7EB228A3881500C91C7B /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		75D17B2128A0EB78005AC477 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		75D17B2328A0EB81005AC477 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		75D17B2528A0EB8D005AC477 /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		753C7EB128A2299000C91C7B /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				75FF18AA28A0E7EF0074D740 /* AppDelegate.swift */,
+				75FF18AC28A0E7EF0074D740 /* SceneDelegate.swift */,
+				753C7EB228A3881500C91C7B /* Preview.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		75FF189E28A0E7EF0074D740 = {
 			isa = PBXGroup;
 			children = (
@@ -153,11 +165,10 @@
 		75FF18A928A0E7EF0074D740 /* ManageYourTime */ = {
 			isa = PBXGroup;
 			children = (
+				753C7EB128A2299000C91C7B /* Support */,
 				75FF18DC28A0E8D80074D740 /* ViewModel */,
 				75FF18DB28A0E8D40074D740 /* View */,
 				75FF18DA28A0E8D00074D740 /* Model */,
-				75FF18AA28A0E7EF0074D740 /* AppDelegate.swift */,
-				75FF18AC28A0E7EF0074D740 /* SceneDelegate.swift */,
 				75FF18B328A0E7F00074D740 /* Assets.xcassets */,
 				75FF18B528A0E7F00074D740 /* LaunchScreen.storyboard */,
 				75FF18B828A0E7F00074D740 /* Info.plist */,
@@ -460,6 +471,7 @@
 				75FF18AD28A0E7EF0074D740 /* SceneDelegate.swift in Sources */,
 				75D17B2828A0EB9B005AC477 /* SettingView.swift in Sources */,
 				75D17B2C28A0F4A4005AC477 /* TabView.swift in Sources */,
+				753C7EB328A3881500C91C7B /* Preview.swift in Sources */,
 				75D17B2428A0EB81005AC477 /* CategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,7 +647,6 @@
 				INFOPLIST_FILE = ManageYourTime/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -664,7 +675,6 @@
 				INFOPLIST_FILE = ManageYourTime/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -12,7 +12,7 @@ class TabBarController: UITabBarController{
     
     // navigation controller
     private lazy var homeTabController: UINavigationController = {
-        let viewController = Mainview()
+        let viewController = MainView()
         let tabBarItem = UITabBarItem(
             title: "홈",
             image: UIImage(systemName: "house.fill"),
@@ -22,12 +22,11 @@ class TabBarController: UITabBarController{
         let navigationView = UINavigationController(rootViewController: viewController)
         return navigationView
     }()
-    
     private lazy var focusTabView: UINavigationController = {
         let focusController = FocusView()
         let tabBarItem = UITabBarItem(
             title: "집중",
-            image: UIImage(systemName:  "house.fill"),
+            image: UIImage(systemName:  "alarm.fill"),
             tag: 1
         )
         focusController.tabBarItem = tabBarItem
@@ -37,8 +36,8 @@ class TabBarController: UITabBarController{
     private lazy var categoryTabView: UINavigationController = {
         let categoryController = CategoryView()
         let tabBarItem = UITabBarItem(
-        title: "종목별",
-        image: UIImage(systemName: "circle"),
+        title: "분 석",
+        image: UIImage(systemName: "doc.text.below.ecg"),//books.vertical
         tag: 2
         )
         categoryController.tabBarItem = tabBarItem
@@ -48,8 +47,8 @@ class TabBarController: UITabBarController{
     private lazy var infoTabView: UINavigationController = {
         let infoController = InfoView()
         let tabBarItem = UITabBarItem(
-        title: "개인정보",
-        image: UIImage(systemName: "square"),
+        title: "정 보",
+        image: UIImage(systemName: "leaf.arrow.triangle.circlepath"),
         tag: 3
         )
         infoController.tabBarItem = tabBarItem
