@@ -10,6 +10,7 @@
 		4BD703A6F78731AF4C37087C /* Pods_ManageYourTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382C92AE62E7D3190A8CE76D /* Pods_ManageYourTimeTests.framework */; };
 		6618B9754850BCAF3A5BAFED /* Pods_ManageYourTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B72497C305201C05958E8FEB /* Pods_ManageYourTime.framework */; };
 		753C7EB328A3881500C91C7B /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753C7EB228A3881500C91C7B /* Preview.swift */; };
+		753C7EB528AA1B6300C91C7B /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753C7EB428AA1B6300C91C7B /* TextCell.swift */; };
 		75D17B2228A0EB78005AC477 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D17B2128A0EB78005AC477 /* FocusView.swift */; };
 		75D17B2428A0EB81005AC477 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D17B2328A0EB81005AC477 /* CategoryView.swift */; };
 		75D17B2628A0EB8D005AC477 /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D17B2528A0EB8D005AC477 /* CompareView.swift */; };
@@ -53,6 +54,7 @@
 		382C92AE62E7D3190A8CE76D /* Pods_ManageYourTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManageYourTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A87B3EC02E099DF921C0070 /* Pods-ManageYourTimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManageYourTimeTests.release.xcconfig"; path = "Target Support Files/Pods-ManageYourTimeTests/Pods-ManageYourTimeTests.release.xcconfig"; sourceTree = "<group>"; };
 		753C7EB228A3881500C91C7B /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		753C7EB428AA1B6300C91C7B /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		75D17B2128A0EB78005AC477 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		75D17B2328A0EB81005AC477 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		75D17B2528A0EB8D005AC477 /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				75D17B2728A0EB9B005AC477 /* SettingView.swift */,
 				75D17B2928A0EBAA005AC477 /* InfoView.swift */,
 				75D17B2B28A0F4A4005AC477 /* TabView.swift */,
+				753C7EB428AA1B6300C91C7B /* TextCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				75D17B2228A0EB78005AC477 /* FocusView.swift in Sources */,
 				75D17B2628A0EB8D005AC477 /* CompareView.swift in Sources */,
 				75FF18AB28A0E7EF0074D740 /* AppDelegate.swift in Sources */,
+				753C7EB528AA1B6300C91C7B /* TextCell.swift in Sources */,
 				75FF18AD28A0E7EF0074D740 /* SceneDelegate.swift in Sources */,
 				75D17B2828A0EB9B005AC477 /* SettingView.swift in Sources */,
 				75D17B2C28A0F4A4005AC477 /* TabView.swift in Sources */,

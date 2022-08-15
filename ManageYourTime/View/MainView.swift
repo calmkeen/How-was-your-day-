@@ -16,7 +16,7 @@ class MainView: UIViewController, UICollectionViewDelegate {
     var selectedIndex : Int?
     
     var mainView = UIView()
-    var collectionView: UICollectionView = {
+    var collectionView: UICollectionView! = {
         let collectionView = UICollectionView()
         collectionView.backgroundColor = .gray
         return collectionView
@@ -98,10 +98,10 @@ extension MainView{
     
     func configureDataSource() {
         
-        let cellRegistration = UICollectionView.CellRegistration<MainView, Int> { (cell, indexPath, identifier) in
+        let cellRegistration = UICollectionView.CellRegistration<TextCell, Int> { (cell, indexPath, identifier) in
             // Populate the cell with our item description.
             cell.label.text = "\(indexPath.section), \(indexPath.item)"
-            cell.contentView.backgroundColor = .cornflowerBlue
+            cell.contentView.backgroundColor = .blue
             cell.contentView.layer.borderColor = UIColor.black.cgColor
             cell.contentView.layer.borderWidth = 1
             cell.contentView.layer.cornerRadius = 8
