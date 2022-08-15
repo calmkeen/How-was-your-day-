@@ -8,27 +8,29 @@
 import UIKit
 import SnapKit
 
-class MainView: UIViewController, UICollectionViewDelegate {
+class MainView: UIViewController {
     
     enum Section {
         case main
     }
-    var selectedIndex : Int?
+//    var selectedIndex : Int?
     
-    var mainView = UIView()
-    var collectionView: UICollectionView! = {
-        let collectionView = UICollectionView()
-        collectionView.backgroundColor = .gray
-        return collectionView
-    }()
-    var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
+    //var mainView = UIView()
     //cell같은 부분이나 데이터를 관리할때 사용하는 코드
-    //    var dataSource :UICollectionViewDiffableDataSource<<#SectionIdentifierType: Hashable#>, <#ItemIdentifierType: Hashable#>>
+    var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
+    var collectionView: UICollectionView! = nil
+//        let collectionView = UICollectionView()
+//        collectionView.backgroundColor = .gray
+//        return collectionView
+//    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         ViewSizing()
         makeView()
         ConfigureNavItem()
+        configureHierarchy()
+        configureDataSource()
         // Do any additional setup after loading the view.
     }
     //  * 앱 사용 중에 메모리가 부족할 때 불리는 메소드
@@ -37,19 +39,19 @@ class MainView: UIViewController, UICollectionViewDelegate {
         super.didReceiveMemoryWarning()
     }
     func makeView(){
-        self.view.addSubview(mainView)
-        mainView.addSubview(collectionView)
+        //self.view.addSubview(mainView)
+        
     }
     func configure(){
         
     }
     func ViewSizing(){
-        mainView.snp.makeConstraints{ make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
-        }
-        collectionView.snp.makeConstraints{ make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
-        }
+//        mainView.snp.makeConstraints{ make in
+//            make.edges.equalTo(view.safeAreaLayoutGuide)
+//        }
+//        collectionView.snp.makeConstraints{ make in
+//            make.edges.equalTo(view.safeAreaLayoutGuide)
+//        }
     }
 }
 
@@ -63,9 +65,8 @@ extension MainView{
     func configureHierarchy() {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        collectionView.backgroundColor = .systemGroupedBackground
-        collectionView.delegate = self
         view.addSubview(collectionView)
+        collectionView.delegate = self
     }
     func createLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewCompositionalLayout {
@@ -113,6 +114,16 @@ extension MainView{
             // Return the cell.
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
         }
+        // initial data
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
+        snapshot.appendSections([Section.main])
+        snapshot.appendItems(Array(0..<100))
+        dataSource.apply(snapshot, animatingDifferences: false)
+    }
+}
+extension MainView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
 
