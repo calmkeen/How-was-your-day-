@@ -22,6 +22,7 @@ class TabBarController: UITabBarController{
         let navigationView = UINavigationController(rootViewController: viewController)
         return navigationView
     }()
+    
     private lazy var focusTabView: UINavigationController = {
         let focusController = FocusView()
         let tabBarItem = UITabBarItem(
@@ -29,10 +30,13 @@ class TabBarController: UITabBarController{
             image: UIImage(systemName:  "alarm.fill"),
             tag: 1
         )
+        //self.navigationItem.title = " 집중 타이머 "
         focusController.tabBarItem = tabBarItem
         let navigationView = UINavigationController(rootViewController: focusController)
+        navigationController?.isNavigationBarHidden = true
         return navigationView
     }()
+    
     private lazy var categoryTabView: UINavigationController = {
         let categoryController = CategoryView()
         let tabBarItem = UITabBarItem(
@@ -40,10 +44,12 @@ class TabBarController: UITabBarController{
         image: UIImage(systemName: "doc.text.below.ecg"),//books.vertical
         tag: 2
         )
+        //self.navigationItem.title = " 카테고리 & 분석 "
         categoryController.tabBarItem = tabBarItem
         let navigationView = UINavigationController(rootViewController: categoryController)
         return navigationView
     }()
+    
     private lazy var infoTabView: UINavigationController = {
         let infoController = InfoView()
         let tabBarItem = UITabBarItem(
@@ -51,8 +57,10 @@ class TabBarController: UITabBarController{
         image: UIImage(systemName: "leaf.arrow.triangle.circlepath"),
         tag: 3
         )
+        //self.navigationItem.title = " 개인 정보 & 설정 "
         infoController.tabBarItem = tabBarItem
         let navigationView = UINavigationController(rootViewController: infoController)
+        
         return navigationView
     }()
     
@@ -64,6 +72,9 @@ class TabBarController: UITabBarController{
         super.viewDidLoad()
         viewControllers = [homeTabController, focusTabView, categoryTabView, infoTabView]
         self.configureTabBar()
+        //전체 제목
+        self.navigationItem.title = "너 지금 뭐해?"
+
     }
     
 }
@@ -76,4 +87,5 @@ extension TabBarController {
         self.tabBar.layer.borderColor = UIColor.lightGray.cgColor
         self.tabBar.layer.borderWidth = 0.4
     }
+
 }

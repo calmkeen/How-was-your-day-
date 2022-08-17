@@ -10,4 +10,19 @@ import UIKit
 
 class CompareView: UIViewController{
     
+    var CompareColView: UICollectionView! = nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationItemSet()
+        view.addSubview(CompareColView)
+    }
+}
+
+extension CompareView {
+    
+    func navigationItemSet(){
+        navigationController?.isNavigationBarHidden = true
+        navigationItem.largeTitleDisplayMode = .always
+    }
 }

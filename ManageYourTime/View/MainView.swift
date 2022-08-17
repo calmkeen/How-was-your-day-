@@ -13,17 +13,17 @@ class MainView: UIViewController {
     enum Section {
         case main
     }
-//    var selectedIndex : Int?
+    //    var selectedIndex : Int?
     
     //var mainView = UIView()
     //cell같은 부분이나 데이터를 관리할때 사용하는 코드
     var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
     var collectionView: UICollectionView! = nil
-//        let collectionView = UICollectionView()
-//        collectionView.backgroundColor = .gray
-//        return collectionView
-//    }()
-
+    //        let collectionView = UICollectionView()
+    //        collectionView.backgroundColor = .gray
+    //        return collectionView
+    //    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ViewSizing()
@@ -40,24 +40,23 @@ class MainView: UIViewController {
     }
     func makeView(){
         //self.view.addSubview(mainView)
-        
     }
     func configure(){
-        
     }
     func ViewSizing(){
-//        mainView.snp.makeConstraints{ make in
-//            make.edges.equalTo(view.safeAreaLayoutGuide)
-//        }
-//        collectionView.snp.makeConstraints{ make in
-//            make.edges.equalTo(view.safeAreaLayoutGuide)
-//        }
+        //        mainView.snp.makeConstraints{ make in
+        //            make.edges.equalTo(view.safeAreaLayoutGuide)
+        //        }
+        //        collectionView.snp.makeConstraints{ make in
+        //            make.edges.equalTo(view.safeAreaLayoutGuide)
+        //        }
     }
 }
 
 extension MainView{
     
     func ConfigureNavItem() {
+        navigationController?.isNavigationBarHidden = true
         navigationItem.title = "너 지금 뭐해?"
         navigationItem.largeTitleDisplayMode = .always
     }
@@ -132,7 +131,7 @@ import SwiftUI
 
 struct MainViewPreview: PreviewProvider{
     static var previews: some View {
-        MainView().toPreview()
+        MainView().toPreview().previewInterfaceOrientation(.portraitUpsideDown)
         TabBarController().toPreview()
     }
 }
