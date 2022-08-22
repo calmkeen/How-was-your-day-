@@ -12,6 +12,8 @@
 		753C7EB328A3881500C91C7B /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753C7EB228A3881500C91C7B /* Preview.swift */; };
 		753C7EB528AA1B6300C91C7B /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753C7EB428AA1B6300C91C7B /* TextCell.swift */; };
 		753C7EB728AF788700C91C7B /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753C7EB628AF788700C91C7B /* ListCell.swift */; };
+		753C7EB928B3539A00C91C7B /* focusTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753C7EB828B3539A00C91C7B /* focusTimeModel.swift */; };
+		753C7EBC28B3687800C91C7B /* FocusChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753C7EBB28B3687800C91C7B /* FocusChartCell.swift */; };
 		75D17B2228A0EB78005AC477 /* FocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D17B2128A0EB78005AC477 /* FocusView.swift */; };
 		75D17B2428A0EB81005AC477 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D17B2328A0EB81005AC477 /* CategoryView.swift */; };
 		75D17B2628A0EB8D005AC477 /* CompareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D17B2528A0EB8D005AC477 /* CompareView.swift */; };
@@ -57,6 +59,8 @@
 		753C7EB228A3881500C91C7B /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		753C7EB428AA1B6300C91C7B /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
 		753C7EB628AF788700C91C7B /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		753C7EB828B3539A00C91C7B /* focusTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = focusTimeModel.swift; sourceTree = "<group>"; };
+		753C7EBB28B3687800C91C7B /* FocusChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusChartCell.swift; sourceTree = "<group>"; };
 		75D17B2128A0EB78005AC477 /* FocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusView.swift; sourceTree = "<group>"; };
 		75D17B2328A0EB81005AC477 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		75D17B2528A0EB8D005AC477 /* CompareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareView.swift; sourceTree = "<group>"; };
@@ -144,6 +148,16 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		753C7EBA28B3681700C91C7B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				753C7EB428AA1B6300C91C7B /* TextCell.swift */,
+				753C7EB628AF788700C91C7B /* ListCell.swift */,
+				753C7EBB28B3687800C91C7B /* FocusChartCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		75FF189E28A0E7EF0074D740 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +216,7 @@
 			children = (
 				75D17B2D28A0FC67005AC477 /* InformationModel.swift */,
 				75D17B2F28A0FC70005AC477 /* SettingModel.swift */,
+				753C7EB828B3539A00C91C7B /* focusTimeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,8 +231,7 @@
 				75D17B2728A0EB9B005AC477 /* SettingView.swift */,
 				75D17B2928A0EBAA005AC477 /* InfoView.swift */,
 				75D17B2B28A0F4A4005AC477 /* TabView.swift */,
-				753C7EB428AA1B6300C91C7B /* TextCell.swift */,
-				753C7EB628AF788700C91C7B /* ListCell.swift */,
+				753C7EBA28B3681700C91C7B /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,10 +482,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				75D17B3028A0FC70005AC477 /* SettingModel.swift in Sources */,
+				753C7EBC28B3687800C91C7B /* FocusChartCell.swift in Sources */,
 				75D17B2A28A0EBAA005AC477 /* InfoView.swift in Sources */,
 				75FF18AF28A0E7EF0074D740 /* MainView.swift in Sources */,
 				753C7EB728AF788700C91C7B /* ListCell.swift in Sources */,
 				75D17B2E28A0FC67005AC477 /* InformationModel.swift in Sources */,
+				753C7EB928B3539A00C91C7B /* focusTimeModel.swift in Sources */,
 				75D17B2228A0EB78005AC477 /* FocusView.swift in Sources */,
 				75D17B2628A0EB8D005AC477 /* CompareView.swift in Sources */,
 				75FF18AB28A0E7EF0074D740 /* AppDelegate.swift in Sources */,
