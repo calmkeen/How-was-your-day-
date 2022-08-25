@@ -45,7 +45,7 @@ class FocusView: UIViewController{
         view.contentInset = .zero
         view.backgroundColor = .clear
         view.clipsToBounds = true
-        view.register(FocusChartCell.self, forCellWithReuseIdentifier: "FcharCell")
+        view.register(FocusChartCell.self, forCellWithReuseIdentifier: "FchartCell")
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
