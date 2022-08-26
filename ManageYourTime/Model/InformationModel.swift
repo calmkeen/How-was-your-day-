@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct InfomationModel{
+    var name: String
+    //누적시간
+    var accumlateTime: String
+    var rank: Int
+    
+}

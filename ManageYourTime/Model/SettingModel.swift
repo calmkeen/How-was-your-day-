@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import UIKit
+
+struct SettingModel{
+    var setFoucsTime: String
+    var setTargetTime: String
+    var settingTime: String
+}
+
